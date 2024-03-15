@@ -1,0 +1,73 @@
+---
+import Tarjetas from "../components/Tarjetas.jsx"
+
+---
+
+
+<section id="proyectos">
+    <div class="container-section">
+        <article>
+            <h1>&ltProyectos/&gt;</h1>
+        </article>
+        <div class="container-tarjetas">
+            <Tarjetas 
+            subtitulo="PokeApi" 
+            tecnologias={["html", "css", "js"]}
+            texto="Una pagina web en donde practique los conceptos de las Apis" 
+            img="img/proyecto-pokeapi.png"
+            url="https://poke-dex-practica.vercel.app/"
+            github="https://github.com/EspadaKinno/PokeDexPractica"/>
+
+            <Tarjetas 
+            subtitulo="Temporizador" 
+            tecnologias={["html", "css", "js"]}
+            texto="Una aplicaciòn web de temporizador hecha con js, css y html" 
+            img="img/proyecto-temporizador.png"
+            url="https://cuenta-regresiva-sigma.vercel.app/"
+            github="https://github.com/OrlandoTellez/cuenta-regresiva"/>
+
+            <Tarjetas 
+            subtitulo="Landing Page" 
+            tecnologias={["html", "css", "js"]}
+            texto="Una landing page hecha con el desafìo de front-end con React" 
+            img="img/proyecto-landing.png"
+            url="https://react-reto.vercel.app/"
+            github="https://github.com/OrlandoTellez/landingPageReto"/>
+            </div>
+    </div>
+</section>
+
+<style>
+    section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-principal);
+        padding: 75px 0px;
+    }
+
+    .container-section{
+        width: 100%;
+        max-width: 1024px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-section article h1{
+        font-size: var(--titulos);
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .container-tarjetas{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        place-items: center;
+        gap: 25px;
+    }
+</style>

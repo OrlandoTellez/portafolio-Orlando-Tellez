@@ -1,0 +1,208 @@
+---
+
+---
+
+<header>
+    <div class="container-header">
+        <figure>
+            <h2>&ltPortafolio/&gt;</h2>
+        </figure>
+        <div class="opacity on"></div>
+        <figure class="menu-icon">
+            <svg  
+            xmlns="http://www.w3.org/2000/svg"  
+            width="24"  
+            height="24"  
+            viewBox="0 0 24 24"  
+            fill="none"  
+            stroke="white"  
+            stroke-width="2"  
+            stroke-linecap="round"  
+            stroke-linejoin="round"  
+            class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
+            <path 
+            stroke="none" 
+            d="M0 0h24v24H0z" 
+            fill="none"/><path 
+            d="M4 6l16 0" /><path 
+            d="M4 12l16 0" /><path 
+            d="M4 18l16 0" />
+        </svg>
+            
+        </figure>
+        <nav class="nav active">
+            <ul>
+                <li><a href="#">Presentacion</a></li>
+                <li><a href="#">Proyectos</a></li>
+                <li><a href="#">Resource</a></li>
+                <li><a href="#">Contact</a></li>
+    
+            </ul>
+    
+            <div class="theme">
+                <label for="toggle" id="label_toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 4C15.292 4 15.438 4 15.5781 4.04183C16.192 4.22522 16.4775 4.93111 16.1637 5.48976C16.0921 5.61719 15.8744 5.82779 15.4389 6.249C13.935 7.70352 13 9.74257 13 12C13 14.2574 13.935 16.2965 15.4389 17.751C15.8744 18.1722 16.0921 18.3828 16.1637 18.5102C16.4775 19.0689 16.192 19.7748 15.5781 19.9582C15.438 20 15.292 20 15 20V20C10.5817 20 7 16.4183 7 12C7 7.58172 10.5817 4 15 4V4Z" fill="#223344"/>
+                    </svg>
+                    </label>
+                <input type="checkbox" id="toggle">
+            </div>
+        </nav>
+        
+    </div>
+  </header>
+  
+  <style>
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: fixed;
+        z-index: 0;
+        padding: 20px;
+        background-color: var(--color-principal);
+        border-bottom: 1px solid white;
+    }
+
+    .container-header{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1024px;
+        color: aliceblue;
+        
+        
+    }
+    
+    .container-header figure h2{
+        font-size: 1.8em;
+        text-align: start;
+    }
+
+    .menu-icon{
+        position: relative;
+        z-index: 15;
+    }
+
+    header nav{
+        position: absolute;
+        height: 100vh;
+        width: 80vw;
+        left: 0;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-principal);
+        transition: all ease .4s;
+        
+    }
+
+    header .active{
+        transform: translate(-600px);
+    }
+
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-size: var(--textos);
+    }
+
+    header nav ul li{
+        list-style: none;
+    }
+
+    header nav ul li a{
+        text-decoration: none;
+        color: var(--white);
+    }
+
+    #toggle{
+            display: none;
+    }
+
+    .on{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        opacity: .5;
+        z-index: 10;
+        background-color: rgb(0, 0, 0);
+        
+    }
+
+    .opacity{
+        opacity: 0;
+        display: none;
+    }
+
+    
+
+    
+
+    @media only screen and (min-width: 1024px){
+
+        .menu-icon{
+            display: none;
+        }
+
+        header nav{
+            position: static;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 68%;
+            transition: all ease .0s;
+        }
+
+        header .active{
+            transform: translate(0px);
+        }
+
+        header nav ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            gap: 30px;
+            height: 100%;
+            
+        }
+
+        header nav ul li a{
+            color: var(--white);
+            font-weight: 500;
+        }
+    }
+
+    
+
+  </style>
+
+<script>
+    let icono = document.querySelector(".menu-icon");
+    let contenedor = document.querySelector(".nav");
+    let opacidad = document.querySelector(".opacity");
+    let light = document.querySelector("#toggle");
+    icono.addEventListener("click", (e) => {
+        contenedor.classList.toggle("active");
+        opacidad.classList.toggle("opacity");
+    })
+
+    light.addEventListener("click", () => {
+        
+    })
+
+  </script>
