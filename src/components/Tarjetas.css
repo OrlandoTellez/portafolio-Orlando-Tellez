@@ -62,8 +62,19 @@
     text-decoration: none;
 }
 
+.contenedor-tarjetas--botones a:hover{
+    color: var(--blanco);
+    background-color: rgb(43, 172, 211);
+    
+}
+
 .contenedor-tarjetas--botones .github{
     background-color: var(--color-principal);
+    border: 1px solid rgb(80, 78, 78);
+}
+
+.contenedor-tarjetas--botones .github:hover{
+    background-color: var(--color-secundario);
     border: 1px solid rgb(80, 78, 78);
 }
 
@@ -80,21 +91,32 @@
     padding: 2px 20px;
 }
 
-.contenedor-tarjeta--textos .container-tecnologias .html{
+.contenedor-tarjeta--textos .container-tecnologias .HTML{
     background-color: #ff8000;
     color: white;
     border-radius: 10px;
     padding: 2px 20px;
 }
 
-.contenedor-tarjeta--textos .container-tecnologias .css{
+.contenedor-tarjeta--textos .container-tecnologias .CSS{
     background-color: #264de4;
     color: white;
 }
 
-.contenedor-tarjeta--textos .container-tecnologias .js{
+.contenedor-tarjeta--textos .container-tecnologias .Js{
     background-color: #F0DB4F;
-    color: #323330
+    color: #323330;
+    
+}
+
+.contenedor-tarjeta--textos .container-tecnologias .React{
+    background-color: #1ba1cc;
+    color: white;
+}
+
+.contenedor-tarjeta--textos .container-tecnologias .Astro{
+    background-color: #3e274e;
+    color: white;
 }
 
 @media only screen and (min-width: 768px){

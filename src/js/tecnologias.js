@@ -1,5 +1,7 @@
 export default{
-    "html": "HTML",
-    "css": "CSS",
-    "js": "Javascript"
+    "HTML": "html",
+    "CSS": "css",
+    "Js": "Javascript",
+    "React": "React",
+    "Astro": "Astro"
 }
