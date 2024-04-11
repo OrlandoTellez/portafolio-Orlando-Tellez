@@ -17,7 +17,7 @@ import Header from "../secciones/Header.astro"
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="light">
+	<body>
 		<Header />
 		<slot />
 	</body>
@@ -44,7 +44,7 @@ import Header from "../secciones/Header.astro"
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: var(--color-secundaio);
+		
 		background-size: 224px;
 		scroll-behavior: smooth;
 	}
@@ -60,5 +60,15 @@ import Header from "../secciones/Header.astro"
 			monospace;
 	}
 
+	html .dark {
+		background-color: #0d0950;
+		color: #fff;
+	}
+
+	.dark .nav-links a {
+		color: #fff;
+	} 
+
+	
 
 </style>
