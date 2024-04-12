@@ -3,7 +3,11 @@
     border-radius: 5px;
     height: 100%;
     transition: 0.3s;
-    background-color: var(--color-secundario);
+    background-color: var(--color-secundario-oscuro);
+}
+
+.dark .contenedor-tarjeta{
+    background-color: var(--color-secundario-claro);
 }
 
 .contenedor-tarjeta--div{
@@ -54,12 +58,18 @@
 
 .contenedor-tarjetas--botones a{
     color: var(--blanco);
-    background-color: var(--color-terciario);
+    background-color: var(--color-terciario-oscuro);
     font-size: var(--text);
     padding: 8px 12px;
     border: none;
     border-radius: 8px;
     text-decoration: none;
+}
+
+.dark .contenedor-tarjetas--botones a{
+    background-color: var(--color-terciario-oscuro);
+    font-size: var(--text);
+    
 }
 
 .contenedor-tarjetas--botones a:hover{
@@ -69,14 +79,22 @@
 }
 
 .contenedor-tarjetas--botones .github{
-    background-color: var(--color-principal);
+    background-color: var(--color-principal-oscuro);
     border: 1px solid rgb(80, 78, 78);
 }
 
 .contenedor-tarjetas--botones .github:hover{
-    background-color: var(--color-secundario);
+    background-color: var(--color-secundario-oscuro);
     border: 1px solid rgb(80, 78, 78);
 }
+
+.dark .contenedor-tarjetas--botones .github{
+    background-color: var(--color-secundario-claro);
+    border: 1px solid rgb(80, 78, 78);
+    color: black;
+}
+
+
 
 
 .contenedor-tarjeta--textos .container-tecnologias{

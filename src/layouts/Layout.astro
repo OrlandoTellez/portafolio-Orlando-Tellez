@@ -20,17 +20,23 @@ import Header from "../secciones/Header.astro"
 	<body>
 		<Header />
 		<slot />
+	
 	</body>
 </html>
+
 <style is:global>
 	:root{
 		color-scheme: light dark;
-		--color-principal: #010409;
-		--color-secundario: #161b22;
-		--color-terciario: #0093d3;
+		--color-principal-oscuro: #010409;
+		--color-secundario-oscuro: #161b22;
+		--color-terciario-oscuro: #0093d3;
+
+		--color-principal-claro: #B3C8CF;
+		--color-secundario-claro: #ffffff;
+		--color-terciario-claro: #ffffff;
 		--blanco: white;
 		--gris: rgb(185, 185, 185);
-		--color-principal-claro: white;
+		
 
 		--titulos: 2.2rem;
 		--sub-titulos: 1.4rem;
@@ -60,14 +66,64 @@ import Header from "../secciones/Header.astro"
 			monospace;
 	}
 
-	html .dark {
-		background-color: #0d0950;
-		color: #fff;
+	section{
+		background-color: var(--color-secundario-oscuro);
 	}
 
-	.dark .nav-links a {
-		color: #fff;
-	} 
+	.dark section{
+		background-color: var(--color-secundario-claro);
+		color: black;
+	}
+
+	header{
+		background-color: var(--color-principal-oscuro);
+		
+	}
+
+	.dark header{
+		background-color: var(--color-principal-claro);
+		border-bottom: 1px solid black;
+	}
+
+	.container-seccion--div a{
+		color: white;
+        
+    }
+
+	 .dark .container-seccion--div a{
+		color: rgb(0, 0, 0);
+        
+    }
+
+	.dark header .container-header nav ul li {
+        color: rgb(0, 0, 0);
+    }
+
+	.dark header .container-header figure {
+        color: rgb(0, 0, 0);
+    }
+
+	header nav{
+		background-color: var(--color-principal-oscuro);
+
+	}
+
+	.dark header nav{
+		background-color: var(--color-principal-claro);
+
+	}
+
+	#proyectos{
+		background-color: var(--color-principal-oscuro);
+	}
+
+	.dark #proyectos{
+		background-color: var(--color-principal-claro);
+	}
+
+	
+	
+
 
 	
 
