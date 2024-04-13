@@ -35,6 +35,11 @@
     color: rgb(198, 193, 193);
 }
 
+.dark .contenedor-tarjeta--textos p{
+    font-size: var(--textos);
+    color: rgb(105, 104, 104);
+}
+
 
 .contenedor-tarjeta--img{
     width: 100%;

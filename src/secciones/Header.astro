@@ -7,7 +7,9 @@ import ModoOscuro from "../components/ModoOscuro.astro";
         <figure>
             <h2>&ltPortafolio/&gt;</h2>
         </figure>
+
         <div class="opacity on"></div>
+        
         <figure class="menu-icon">
             <svg  
             xmlns="http://www.w3.org/2000/svg"  
@@ -27,7 +29,7 @@ import ModoOscuro from "../components/ModoOscuro.astro";
             d="M4 6l16 0" /><path 
             d="M4 12l16 0" /><path 
             d="M4 18l16 0" />
-        </svg>
+            </svg>
             
         </figure>
         <nav class="nav active">
@@ -57,19 +59,16 @@ import ModoOscuro from "../components/ModoOscuro.astro";
         position: fixed;
         z-index: 0;
         padding: 20px;
-        
         border-bottom: 1px solid white;
     }
 
     .container-header{
         width: 100%;
-        height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         max-width: 1024px;
         color: aliceblue;
-        
         
     }
     
@@ -153,20 +152,41 @@ import ModoOscuro from "../components/ModoOscuro.astro";
     
 
     @media only screen and (min-width: 1024px){
-
+        header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: normal;
+            width: 100%;
+            height: 15vh;
+            position: fixed;
+            z-index: 0;
+            padding: 20px;
+           
+        }
+        .container-header{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1024px;
+            color: aliceblue;
+            
+        }
+       
         .menu-icon{
             display: none;
         }
 
         header nav{
             position: static;
-            height: 100%;
-            width: 100%;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
             width: 68%;
+            height: 0vh;
             transition: all ease .0s;
         }
 
@@ -177,14 +197,17 @@ import ModoOscuro from "../components/ModoOscuro.astro";
         header nav ul{
             display: flex;
             flex-direction: row;
-            justify-content: end;
-            gap: 30px;
+            align-items: center;
             height: 100%;
+            gap: 30px;
+            margin-top: 0px;
+            font-size: 20px;
             
         }
 
         header nav ul li a{
             color: var(--white);
+            
             font-weight: 500;
         }
     }
