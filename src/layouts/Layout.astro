@@ -1,159 +1,172 @@
 ---
 // Supports weights 200-700
-import '@fontsource-variable/oswald';
+import "@fontsource-variable/oswald";
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
-import Header from "../secciones/Header.astro"
+import Header from "../secciones/Header.astro";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Header />
-		<slot />
-	
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-	:root{
-		color-scheme: light dark;
-		--color-principal-oscuro: #010409;
-		--color-secundario-oscuro: #161b22;
-		--color-terciario-oscuro: #0093d3;
+  :root {
+    color-scheme: light dark;
+    --color-principal-oscuro: #010409;
+    --color-secundario-oscuro: #161b22;
+    --color-terciario-oscuro: #0093d3;
 
-		--color-principal-claro: #B3C8CF;
-		--color-secundario-claro: #ffffff;
-		--color-terciario-claro: #ffffff;
-		--blanco: white;
-		--gris: rgb(185, 185, 185);
-		
+    --color-principal-claro: #b3c8cf;
+    --color-secundario-claro: #ffffff;
+    --color-terciario-claro: #ffffff;
+    --blanco: white;
+    --gris: rgb(185, 185, 185);
 
-		--titulos: 2.2rem;
-		--sub-titulos: 1.4rem;
-		--textos: 1.2rem;
-	}
+    --titulos: 2.2rem;
+    --sub-titulos: 1.4rem;
+    --textos: 1.2rem;
 
-	*{
-		padding: 0;
-		margin: 0;
-		box-sizing: border-box;
-	}
-	html {
-		/* font-family: system-ui, sans-serif; */
-		font-family: 'Oswald Variable', sans-serif;
-		background-size: 224px;
-		scroll-behavior: smooth;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+	--ancho-maximo: 1024px;
+  }
 
-	section{
-		background-color: var(--color-secundario-oscuro);
-	}
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    /* font-family: system-ui, sans-serif; */
+    font-family: "Oswald Variable", sans-serif;
+    background-size: 224px;
+    scroll-behavior: smooth;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
 
-	.dark section{
-		background-color: var(--color-secundario-claro);
-		color: black;
-	}
+  h2{
+	font-size: 1.8em;
+  }
 
-	header{
-		background-color: var(--color-principal-oscuro);
-	}
+  ul{
+	font-size: 20px;
+  }
 
-	.dark header{
-		background-color: var(--color-principal-claro);
-		border-bottom: 1px solid black;
-	}
+  section {
+    background-color: var(--color-secundario-oscuro);
+  }
 
-	.container-seccion--div a{
-		color: rgb(17, 15, 15);
-        
-    }
+  .dark section {
+    background-color: var(--color-secundario-claro);
+    color: black;
+  }
 
-	 .dark .container-seccion--div a{
-		color: rgb(0, 0, 0);
-        
-    }
+  header {
+    background-color: var(--color-principal-oscuro);
+  }
 
-	.dark header .container-header nav ul li {
-        color: rgb(0, 0, 0);
-    }
+  .dark header {
+    background-color: var(--color-principal-claro);
+    border-bottom: 1px solid black;
+  }
 
-	.dark header .container-header figure {
-        color: rgb(0, 0, 0);
-    }
+  .container-seccion--div a {
+    color: rgb(17, 15, 15);
+  }
 
-	header nav{
-		background-color: var(--color-principal-oscuro);
+  .dark .container-seccion--div a {
+    color: rgb(0, 0, 0);
+  }
 
-	}
+  .dark header .container nav ul li {
+    color: rgb(0, 0, 0);
+  }
 
-	.dark header nav{
-		background-color: var(--color-principal-claro);
+  .dark header .container figure {
+    color: rgb(0, 0, 0);
+  }
 
-	}
+  header nav {
+    background-color: var(--color-principal-oscuro);
+  }
 
-	#proyectos{
-		background-color: var(--color-principal-oscuro);
-	}
+  .dark header nav {
+    background-color: var(--color-principal-claro);
+  }
 
-	.dark #proyectos{
-		background-color: var(--color-principal-claro);
-	}
+  #proyectos {
+    background-color: var(--color-principal-oscuro);
+  }
 
-	.container-text p{
-        margin-bottom: 20px;
-        color: rgb(230, 222, 222);
-    }
+  .dark #proyectos {
+    background-color: var(--color-principal-claro);
+  }
 
-	.dark .container-text p{
-        margin-bottom: 20px;
-        color: rgb(105, 104, 104);
-    }
+  .container-text p {
+    margin-bottom: 20px;
+    color: rgb(230, 222, 222);
+  }
 
-	.container-text p span{
-        color: #84c2df;
-    }
+  .dark .container-text p {
+    margin-bottom: 20px;
+    color: rgb(105, 104, 104);
+  }
 
+  .container-text p span {
+    color: #84c2df;
+  }
 
-	.dark .container-text p span{
-        color: #007cb6;
-    }
+  .dark .container-text p span {
+    color: #007cb6;
+  }
 
-	.container-seccion--div h2{
-        font-size: var(--sub-titulos);
-        color: var(--gris);
-    }
+  .container-seccion--div h2 {
+    font-size: var(--sub-titulos);
+    color: var(--gris);
+  }
 
-	.dark .container-seccion--div h2{
-        font-size: var(--sub-titulos);
-		color: rgb(105, 104, 104);
-    }
-	
-	
+  .dark .container-seccion--div h2 {
+    font-size: var(--sub-titulos);
+    color: rgb(105, 104, 104);
+  }
 
+  body{
+	width: 100%;
+  }
 
-	
-
+  a{
+	text-decoration: none;
+	color: var(--blanco);
+  }
+  li{
+	list-style: none;
+  }
 </style>
