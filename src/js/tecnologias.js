@@ -3,5 +3,6 @@ export default{
     "CSS": "css",
     "Js": "Javascript",
     "React": "React",
-    "Astro": "Astro"
+    "Astro": "Astro",
+    "NodeJs": "NodeJs"
 }
