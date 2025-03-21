@@ -1,8 +1,11 @@
 export default{
-    "HTML": "html",
-    "CSS": "css",
+    "HTML": "HTML",
+    "CSS": "CSS",
     "Js": "Javascript",
     "React": "React",
     "Astro": "Astro",
-    "NodeJs": "NodeJs"
+    "NodeJs": "NodeJs",
+    "NextJs": "NextJs",
+    "MySql": "MySql",
+    "Express": "Express",
 }
