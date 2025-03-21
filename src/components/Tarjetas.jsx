@@ -1,5 +1,5 @@
 import "./Tarjetas.css"
-import iconos from "../js/tecnologias";
+import {iconos} from "../js/tecnologias";
 
 const Tarjetas = ({subtitulo, img, texto, url, github, tecnologias}) => {
   const tecnologiasJSX = tecnologias.map((tecnologia, index) => {

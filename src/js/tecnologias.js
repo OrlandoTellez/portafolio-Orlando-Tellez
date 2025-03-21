@@ -1,11 +1,11 @@
-export default{
-    "HTML": "HTML",
-    "CSS": "CSS",
-    "Js": "Javascript",
-    "React": "React",
-    "Astro": "Astro",
-    "NodeJs": "NodeJs",
-    "NextJs": "NextJs",
-    "MySql": "MySql",
-    "Express": "Express",
+export const iconos = {
+    "HTML": "html",
+    "CSS": "css",
+    "Js": "javascript",
+    "React": "react",
+    "Astro": "astro",
+    "NodeJs": "nodejs",
+    "NextJs": "nextjs",
+    "MySql": "mysql",
+    "Express": "express",
 }
