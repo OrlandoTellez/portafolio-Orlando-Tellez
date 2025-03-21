@@ -1,6 +1,32 @@
 ---
 import Tarjetas from "../components/Tarjetas.jsx"
 
+const proyectos = [
+  {
+    subtitulo: "Trello App",
+    tecnologias: ["HTML", "CSS", "Js"],
+    texto: "Aplicación web que simula el comportamiento de Trello, ofreciendo una interfaz sencilla y eficiente.",
+    img: "img/proyecto-trelloApp.png",
+    url: "https://orlandotellez.github.io/trello-app/",
+    github: "https://github.com/OrlandoTellez/trello-app"
+  },
+  {
+    subtitulo: "Twitter Clone",
+    tecnologias: ["NodeJs", "CSS", "Express", "MySql"],
+    texto: "Clon de Twitter con funcionalidades básicas como publicaciones, usuarios y base de datos integrada.",
+    img: "img/proyecto-twiterClon.png",
+    url: "https://twiter-clon-production.up.railway.app/",
+    github: "https://github.com/OrlandoTellez/twiter-clon"
+  },
+  {
+    subtitulo: "Hardware Web",
+    tecnologias: ["NextJs", "React"],
+    texto: "Página web que enseña sobre hardware, explicando sus componentes y sus usos.",
+    img: "img/proyecto-hardwareWeb.png",
+    url: "https://hardware-web.vercel.app/",
+    github: "https://github.com/OrlandoTellez/hardware-web"
+  }
+];
 ---
 
 
@@ -11,53 +37,17 @@ import Tarjetas from "../components/Tarjetas.jsx"
         </article>
         <div class="container-tarjetas">
            
-            <Tarjetas 
-            subtitulo="Coffe Api" 
-            tecnologias={["React", "Astro"]}
-            texto="La página ofrece una experiencia interactiva y dinámica, mostrando datos obtenidos a través de diferentes APIs." 
-            img="img/proyecto-cafe.png"
-            url="https://proyecto-cafe-listado.vercel.app/"
-            github="https://github.com/OrlandoTellez/proyecto-cafeListado"/>
-<!-- 
-            <Tarjetas 
-            subtitulo="PokeApi" 
-            tecnologias={["HTML", "CSS", "Js"]}
-            texto="La aplicación permite a los usuarios explorar información sobre diferentes Pokémon, incluyendo sus estadísticas, habilidades y tipos." 
-            img="img/proyecto-pokeapi.png"
-            url="https://poke-dex-practica.vercel.app/"
-            github="https://github.com/EspadaKinno/PokeDexPractica"/> -->
-<!-- 
-            <Tarjetas 
-            subtitulo="Temporizador" 
-            tecnologias={["HTML", "CSS", "Js"]}
-            texto="La aplicación permite a los usuarios configurar temporizadores personalizados para llevar un seguimiento del tiempo." 
-            img="img/proyecto-temporizador.png"
-            url="https://cuenta-regresiva-sigma.vercel.app/"
-            github="https://github.com/OrlandoTellez/cuenta-regresiva"/> -->
-
-            <Tarjetas 
-            subtitulo="Landing Page" 
-            tecnologias={["React"]}
-            texto=" La página presenta información concisa y persuasiva sobre un producto, servicio o evento específico, todo esto utilizando React" 
-            img="img/proyecto-landing.png"
-            url="https://react-reto.vercel.app/"
-            github="https://github.com/OrlandoTellez/landingPageReto"/>
-
-            <Tarjetas 
-            subtitulo="Translate App" 
-            tecnologias={["Js"]}
-            texto=" La página presenta información concisa y persuasiva sobre un producto, servicio o evento específico, todo esto utilizando React" 
-            img="img/proyecto-translateApp.png"
-            url="https://proyecto-translate-app.vercel.app/"
-            github="https://github.com/OrlandoTellez/proyecto-translateApp"/>
-
-            <!-- <Tarjetas 
-            subtitulo="Home Page" 
-            tecnologias={["HTML", "CSS", "Js"]}
-            texto=" La página presenta un diseño moderno y funcional, con la capacidad de alternar entre el modo claro y oscuros. Realizado con jJavascript." 
-            img="img/proyecto-homePage.png"
-            url="https://orlandotellez.github.io/desafio-simpleHomepage/"
-            github="https://github.com/OrlandoTellez/desafio-simpleHomepage"/> -->
+            {
+              proyectos.map((proyecto) => (
+                <Tarjetas 
+                subtitulo={proyecto.subtitulo} 
+                tecnologias={proyecto.tecnologias}
+                texto={proyecto.texto} 
+                img={proyecto.img}
+                url={proyecto.url}
+                github={proyecto.github}/>
+              ))
+            }
            
     </div>
 </section>
