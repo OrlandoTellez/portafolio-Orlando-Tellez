@@ -1,4 +1,5 @@
 ---
+import logo from "../assets/iconos/logo.svg";
 import ModoOscuro from "../components/ModoOscuro.astro";
 import MenuIcono from "../assets/iconos/MenuIcono.svg";
 ---
@@ -6,7 +7,10 @@ import MenuIcono from "../assets/iconos/MenuIcono.svg";
 <header>
   <div class="container">
     <figure>
-      <h2>&ltPortafolio/&gt;</h2>
+      <h2>
+        <img src={logo.src} alt="logo">
+        Portafolio
+      </h2>
     </figure>
 
     <div class="opacity on"></div>
@@ -38,6 +42,7 @@ import MenuIcono from "../assets/iconos/MenuIcono.svg";
     padding: 20px;
     position: fixed;
     border-bottom: 1px solid white;
+    z-index: 10;
   }
 
   .container{
