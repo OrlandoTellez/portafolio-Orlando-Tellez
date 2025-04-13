@@ -3,12 +3,9 @@
     border-radius: 5px;
     height: 100%;
     transition: 0.3s;
-    background-color: var(--color-secundario-oscuro);
+    background-color: var(--color-card);
 }
 
-.dark .contenedor-tarjeta{
-    background-color: var(--color-secundario-claro);
-}
 
 .contenedor-tarjeta--div{
     width: 90vw;
@@ -31,13 +28,9 @@
 
 .contenedor-tarjeta--textos p{
     font-size: var(--textos);
-    color: rgb(198, 193, 193);
+    color: var(--color-fuente);
 }
 
-.dark .contenedor-tarjeta--textos p{
-    font-size: var(--textos);
-    color: rgb(105, 104, 104);
-}
 
 
 .contenedor-tarjeta--img{
@@ -61,8 +54,8 @@
 }
 
 .contenedor-tarjetas--botones a{
-    color: var(--blanco);
-    background-color: var(--color-terciario-oscuro);
+    color: black;
+    background-color: var(--color-secundario);
     font-size: var(--text);
     padding: 8px 12px;
     border: none;
@@ -70,11 +63,6 @@
     text-decoration: none;
 }
 
-.dark .contenedor-tarjetas--botones a{
-    background-color: var(--color-terciario-oscuro);
-    font-size: var(--text);
-    
-}
 
 .contenedor-tarjetas--botones a:hover{
     color: var(--blanco);
@@ -83,20 +71,16 @@
 }
 
 .contenedor-tarjetas--botones .github{
-    background-color: var(--color-principal-oscuro);
+    background-color: var(--color-principal);
     border: 1px solid rgb(80, 78, 78);
+    color: var(--color-fuente);
 }
 
 .contenedor-tarjetas--botones .github:hover{
-    background-color: var(--color-secundario-oscuro);
+    background-color: var(--color-secundario);
     border: 1px solid rgb(80, 78, 78);
 }
 
-.dark .contenedor-tarjetas--botones .github{
-    background-color: var(--color-secundario-claro);
-    border: 1px solid rgb(80, 78, 78);
-    color: black;
-}
 
 
 
