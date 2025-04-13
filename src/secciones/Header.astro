@@ -1,61 +1,117 @@
 ---
 import logo from "../assets/iconos/logo.svg";
-import ModoOscuro from "../components/ModoOscuro.astro";
-import MenuIcono from "../assets/iconos/MenuIcono.svg";
+import menuIcon from "../assets/iconos/MenuIcono.svg";
+import iconSol from "../assets/iconos/sun.svg";
+import iconLuna from "../assets/iconos/moon.svg";
 ---
 
 <header>
-  <div class="container">
-    <figure>
-      <h2>
-        <img src={logo.src} alt="logo">
-        Portafolio
-      </h2>
+  <div class="container-header">
+    <figure class="logo">
+      <a href="/" class="logo-link">
+        <img src={logo.src} alt="logo" />
+        <h2>Portafolio</h2>
+      </a>
     </figure>
 
-    <div class="opacity on"></div>
+    <!-- <div class="opacity on"></div> -->
 
-    <figure class="menu-icon">
-      <img src={MenuIcono.src} alt="icono-menu" />
-    </figure>
-    <nav class="nav active">
+    <nav class="contenedor active">
       <ul>
-        <li><a href="#presentacion">Presentacion</a></li>
+        <li><a href="#">Inicio</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
-
-        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#sobre-mi">Sobre mi</a></li>
       </ul>
-
-      <div>
-        <ModoOscuro />
-      </div>
     </nav>
+
+    <div class="container-header--icon">
+      <figure class="menu-icon">
+        <!-- <img
+          class="menu-hamburguesa--icon"
+          src={menuIcon.src}
+          alt="icono-tres barras"
+        /> -->
+        <svg  
+            xmlns="http://www.w3.org/2000/svg"  
+            class="menu-hamburguesa--icon"
+            width="24"  
+            height="24"  
+            viewBox="0 0 24 24"  
+            fill="none"  
+            stroke="currentColor"  
+            stroke-width="2"  
+            stroke-linecap="round"  
+            stroke-linejoin="round"  
+            class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
+            <path 
+            stroke="none" 
+            d="M0 0h24v24H0z" 
+            fill="none"/><path 
+            d="M4 6l16 0" /><path 
+            d="M4 12l16 0" /><path 
+            d="M4 18l16 0" />
+        </svg>
+      </figure>
+      <div class="hover-icon">
+        <button id="theme-toggle" class="theme-button">
+          <img src={iconSol.src} alt="Modo claro" class="theme-icon sun" />
+          <img src={iconLuna.src} alt="Modo oscuro" class="theme-icon moon" />
+        </button>
+      </div>
+    </div>
   </div>
 </header>
 
 <style>
   header {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    background-color: var(--color-principal);
     position: fixed;
-    border-bottom: 1px solid white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
     z-index: 10;
   }
 
-  .container{
+  .theme-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
     width: 100%;
+    padding: 0px 20px;
+  }
+
+  .theme-icon {
+    width: 24px;
+    height: 24px;
+    display: none;
+  }
+
+  html[data-theme="dark"] .moon,
+  html[data-theme="light"] .sun {
+    display: block;
+  }
+
+  .container-header {
     max-width: var(--ancho-maximo);
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
+  .container-header--icon {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
   .logo-link {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    align-items: center;
   }
 
   nav {
@@ -68,34 +124,66 @@ import MenuIcono from "../assets/iconos/MenuIcono.svg";
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 60px;
-    background-color: var(--color-principal-oscuro);
+    padding-top: 80px;
+    background-color: var(--color-principal);
     transition: all ease 0.4s;
+
+    && ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      && li {
+        font-size: 20px;
+        && a {
+          display: block;
+          width: 100%;
+          padding: 20px;
+          color: var(--color-fuente);
+        }
+
+        && a:hover {
+          color: var(--color-secundario);
+        }
+      }
+
+      && .hover-icon:hover {
+        border: none;
+      }
+    }
   }
 
-  nav ul li a{
-        text-decoration: none;
-        color: var(--white);
-        transition: all .5s;
-    }
-
-   nav ul li a:hover{
-        list-style: none;
-        color: var(--color-terciario-oscuro);
-        border-bottom: 2px solid var(--color-terciario-oscuro);
-    }
+  .menu-hamburguesa--icon {
+    color: var(--color-alternar);
+  }
 
   .active {
     transform: translate(-1200px);
   }
 
+  .menu-icon{
+    display: grid;
+  }
+
+  .hover-icon{
+    display: grid;
+  }
+
+
+
   @media only screen and (min-width: 1024px) {
-    header{
-        width: 100%;
+    .logo {
+      order: 1;
     }
-    .container{
-        justify-content: ;
+
+    .container-header--icon {
+      order: 3;
+    }
+    .container-header {
+      max-width: var(--ancho-maximo);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .menu-icon {
@@ -105,35 +193,59 @@ import MenuIcono from "../assets/iconos/MenuIcono.svg";
     nav {
       position: static;
       height: 100%;
-      width: 35%;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 65%;
-      transition: all ease .0s;
+      transition: all ease 0s;
+      padding-top: 0px;
+      margin-right: 40px;
+      order: 2;
+
+      && ul {
+        flex-direction: row;
+        gap: 5px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+        && li {
+          padding: 0px;
+          font-size: 16px;
+          && a {
+            display: block;
+            padding: 0px;
+          }
+        }
+      }
     }
 
     .active {
       transform: none;
     }
-
-    ul {
-      display: flex;
-      gap: 30px;
-    }
-
-    a{
-        font-weight: 500;
-    }
   }
 </style>
 
-<script>
-  let icono = document.querySelector(".menu-icon");
-  let contenedor = document.querySelector(".nav");
-  let opacidad = document.querySelector(".opacity");
+<script is:inline>
+  const icono = document.querySelector(".menu-icon");
 
-  icono.addEventListener("click", (e) => {
-    contenedor.classList.toggle("active");
-    opacidad.classList.toggle("opacity");
+  const contenedor = document.querySelector(".contenedor");
+  icono?.addEventListener("click", () => {
+    contenedor?.classList.toggle("active");
+  });
+
+  const themeToggle = document.getElementById("theme-toggle");
+  const html = document.documentElement;
+
+  const savedTheme =
+    localStorage.getItem("theme") ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light");
+
+  html.setAttribute("data-theme", savedTheme);
+
+  themeToggle.addEventListener("click", () => {
+    const newTheme =
+      html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    html.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
   });
 </script>

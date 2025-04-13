@@ -26,24 +26,32 @@ import Header from "../secciones/Header.astro";
 </html>
 
 <style is:global>
-  :root {
-    color-scheme: light dark;
-    --color-principal-oscuro: #010409;
-    --color-secundario-oscuro: #161b22;
-    --color-terciario-oscuro: #0093d3;
+ :root {
+		--color-principal: #121216;
+		--color-secundario: #ffc824;
+		--color-alternar:  #ffc824;
+		--color-alternar-svg-fondo: #2f291d;
+		--color-card: #17171c;
+		--color-fuente: #fafafa;
+		--color-fuente-secundario: #676765;
+		--color-blanco: #ffffff;
+		--ancho-maximo: 1200px;
 
-    --color-principal-claro: #b3c8cf;
-    --color-secundario-claro: #ffffff;
-    --color-terciario-claro: #ffffff;
-    --blanco: white;
-    --gris: rgb(185, 185, 185);
+    --titulos: 2.5rem;
+    --sub-titulos: 1.5rem;
+	}
 
-    --titulos: 2.2rem;
-    --sub-titulos: 1.4rem;
-    --textos: 1.2rem;
-
-    --ancho-maximo: 1024px;
-  }
+	[data-theme="light"] {
+		--color-principal: #ffffff;
+		--color-secundario: #ffc824;
+		--color-alternar: #121216;
+		--color-alternar-svg-fondo: #f4f4f5;
+		--color-card: #fafafa;
+		--color-fuente: #09090b;
+		--color-fuente-secundario: #484643;
+		--color-blanco: #ffffff;
+		--ancho-maximo: 1200px;
+	}
 
   * {
     padding: 0;
@@ -62,113 +70,30 @@ import Header from "../secciones/Header.astro";
     justify-content: center;
   }
 
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-
-  h2 {
-    font-size: 1.8em;
-  }
-
-  ul {
-    font-size: 20px;
-  }
-
-  section {
-    background-color: var(--color-secundario-oscuro);
-  }
-
-  .dark section {
-    background-color: var(--color-secundario-claro);
-    color: black;
-  }
-
-  header {
-    background-color: var(--color-principal-oscuro);
-  }
-
-  .dark header {
-    background-color: var(--color-principal-claro);
-    border-bottom: 1px solid black;
-  }
-
-  .container-seccion--div a {
-    color: rgb(17, 15, 15);
-  }
-
-  .dark .container-seccion--div a {
-    color: rgb(0, 0, 0);
-  }
-
-  .dark header .container nav ul li {
-    color: rgb(0, 0, 0);
-  }
-
-  .dark header .container figure {
-    color: rgb(0, 0, 0);
-  }
-
-  header nav {
-    background-color: var(--color-principal-oscuro);
-  }
-
-  .dark header nav {
-    background-color: var(--color-principal-claro);
-  }
-
-  #proyectos {
-    background-color: var(--color-principal-oscuro);
-  }
-
-  .dark #proyectos {
-    background-color: var(--color-principal-claro);
-  }
-
-  .container-text p {
-    margin-bottom: 20px;
-    color: rgb(230, 222, 222);
-  }
-
-  .dark .container-text p {
-    margin-bottom: 20px;
-    color: rgb(105, 104, 104);
-  }
-
-  .container-text p span {
-    color: #84c2df;
-  }
-
-  .dark .container-text p span {
-    color: #007cb6;
-  }
-
-  .container-seccion--div h2 {
-    font-size: var(--sub-titulos);
-    color: var(--gris);
-  }
-
-  .dark .container-seccion--div h2 {
-    font-size: var(--sub-titulos);
-    color: rgb(105, 104, 104);
-  }
-
-  body {
+  body{
     width: 100%;
-  }
 
-  a {
-    text-decoration: none;
-    color: var(--blanco);
-  }
-  li {
-    list-style: none;
-  }
+		background-color: var(--color-principal);
+		color: var(--color-fuente);
+	}
+
+	h1{
+		font-size: 2.5rem;
+	}
+
+	p{
+		color: var(--color-fuente);
+		font-size: 1.2rem;
+	}
+
+	li{
+		list-style: none;
+	}
+
+	a{
+		text-decoration: none;
+		color: var(--color-fuente);
+	}
+ 
+
 </style>
