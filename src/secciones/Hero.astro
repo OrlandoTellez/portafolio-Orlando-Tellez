@@ -11,7 +11,7 @@
     </figure>
 
     <div class="container-seccion--div">
-      <h1>Hola. Soy Orlando Tellez</h1>
+      <h1>Hola, Soy Orlando Tellez</h1>
       <h2>Desarrollador full-stack con Javascript</h2>
       <div class="div-icons">
         <a class="icon" href="https://github.com/OrlandoTellez" target="_blank">
@@ -106,6 +106,7 @@
     justify-content: center;
     text-align: center;
     gap: 20px;
+    padding: 0 20px;
   }
 
   .container-seccion--div h1 {
@@ -114,14 +115,15 @@
 
   .container-seccion--div h2 {
     font-size: var(--sub-titulos);
+    color: var(--color-fuente-secundario);
   }
 
   .container-seccion--div a {
-    padding: 8px 12px;
+    padding: 8px 25px;
     border: none;
     border-radius: 8px;
     text-decoration: none;
-    font-size: var(--textos);
+    font-size: 1.2rem;
   }
 
   .container-seccion--div .div-icons {
@@ -156,20 +158,24 @@
   .container-div--botones .CV {
     background-color: var(--color-terciario);
     transition: all 0.3s ease;
+    color: var(--color-fuente);
+
   }
 
   .container-div--botones .CV:hover {
     background-color: white;
+    color: black;
   }
 
   .container-div--botones .proyectos {
     background-color: var(--color-secundario);
     transition: all 0.3s ease;
+    color: black;
   }
 
   .container-div--botones .proyectos:hover {
-    background-color: white;
-    color: var(--color-terciario);
+      background-color: white;
+      color: black;
   }
 
   /* @keyframes move-background {
