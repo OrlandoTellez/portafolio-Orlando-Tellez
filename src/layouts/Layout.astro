@@ -27,7 +27,14 @@ import Header from "../secciones/Header.astro";
 
 <style is:global>
   :root {
-    --color-principal: #121216;
+    --titulos: 2.5rem;
+    --sub-titulos: 1.5rem;
+    --ancho-maximo: 1024px;
+    --color-blanco: #ffffff;
+  }
+
+  [data-theme="dark"] {
+   	--color-principal: #121216;
     --color-secundario: #ffd700;
     --color-alternar: #ffd700;
     --color-alternar-svg-fondo: #2f291d;
@@ -35,15 +42,10 @@ import Header from "../secciones/Header.astro";
     --color-fuente: #fafafa;
     --color-fuente-secundario: #c5c5c5;
 	--color-fuente-tag: black;
-    --color-blanco: #ffffff;
-    --ancho-maximo: 1024px;
-
-    --titulos: 2.5rem;
-    --sub-titulos: 1.5rem;
   }
 
   [data-theme="light"] {
-    --color-principal: #f8eedf;
+	--color-principal: #f8eedf;
     --color-secundario: #ffd700;
     --color-alternar: black;
     --color-alternar-svg-fondo: #f4f4f5;
@@ -51,8 +53,6 @@ import Header from "../secciones/Header.astro";
     --color-fuente: #09090b;
     --color-fuente-secundario: #484643;
 	--color-fuente-tag: white;
-    --color-blanco: #ffffff;
-    --ancho-maximo: 1024px;
   }
 
   * {
