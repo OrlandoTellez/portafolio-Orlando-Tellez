@@ -9,7 +9,7 @@ export const proyectos = [
       },
       {
         subtitulo: "Twitter Clone",
-        tecnologias: ["NodeJs", "CSS", "Express", "MySql"],
+        tecnologias: ["NodeJs", "Express", "MySql"],
         texto: "Clon de Twitter con funcionalidades básicas como publicaciones, usuarios y base de datos integrada.",
         img: "img/proyecto-twiterClon.png",
         url: "https://twiter-clon.onrender.com/",
