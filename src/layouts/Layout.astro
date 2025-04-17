@@ -26,39 +26,41 @@ import Header from "../secciones/Header.astro";
 </html>
 
 <style is:global>
- :root {
-		--color-principal: #121216;
-		--color-secundario: #ffd700;
-		--color-alternar:  #ffd700;
-		--color-alternar-svg-fondo: #2f291d;
-		--color-card: #17171c;
-		--color-fuente: #fafafa;
-		--color-fuente-secundario: #c5c5c5;
-		--color-blanco: #ffffff;
-		--ancho-maximo: 1024px;
+  :root {
+    --color-principal: #121216;
+    --color-secundario: #ffd700;
+    --color-alternar: #ffd700;
+    --color-alternar-svg-fondo: #2f291d;
+    --color-card: #17171c;
+    --color-fuente: #fafafa;
+    --color-fuente-secundario: #c5c5c5;
+	--color-fuente-tag: black;
+    --color-blanco: #ffffff;
+    --ancho-maximo: 1024px;
 
     --titulos: 2.5rem;
     --sub-titulos: 1.5rem;
-	}
+  }
 
-	[data-theme="light"] {
-		--color-principal: #FDFAF6;
-		--color-secundario: #ffd700;
-		--color-alternar: black;
-		--color-alternar-svg-fondo: #f4f4f5;
-		--color-card: #fafafa;
-		--color-fuente: #09090b;
-		--color-fuente-secundario: #484643;
-		--color-blanco: #ffffff;
-		--ancho-maximo: 1024px;
-	}
+  [data-theme="light"] {
+    --color-principal: #f8eedf;
+    --color-secundario: #ffd700;
+    --color-alternar: black;
+    --color-alternar-svg-fondo: #f4f4f5;
+    --color-card: #fafafa;
+    --color-fuente: #09090b;
+    --color-fuente-secundario: #484643;
+	--color-fuente-tag: white;
+    --color-blanco: #ffffff;
+    --ancho-maximo: 1024px;
+  }
 
   * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
-  
+
   html {
     /* font-family: system-ui, sans-serif; */
     font-family: "Oswald Variable", sans-serif;
@@ -70,30 +72,27 @@ import Header from "../secciones/Header.astro";
     justify-content: center;
   }
 
-  body{
+  body {
     width: 100%;
+    background-color: var(--color-principal);
+  }
 
-		background-color: var(--color-principal);
-		color: var(--color-fuente);
-	}
+  h1 {
+	color: var(--color-fuente);
+    font-size: 2.5rem;
+  }
 
-	h1{
-		font-size: 2.5rem;
-	}
+  p {
+    color: var(--color-fuente);
+    font-size: 1.2rem;
+  }
 
-	p{
-		color: var(--color-fuente);
-		font-size: 1.2rem;
-	}
+  li {
+    list-style: none;
+  }
 
-	li{
-		list-style: none;
-	}
-
-	a{
-		text-decoration: none;
-		color: var(--color-fuente);
-	}
- 
-
+  a {
+    text-decoration: none;
+    color: var(--color-fuente);
+  }
 </style>
