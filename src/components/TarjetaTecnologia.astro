@@ -1,0 +1,46 @@
+---
+interface Props{
+    titulo: string;
+    icono: string;
+}
+
+const { titulo, icono }: Props = Astro.props;
+---
+
+<div class="tarjeta-tecnologia">
+    <div class="icono">
+        <img src={icono} alt={titulo} />
+    </div>
+    <div class="titulo">
+        <h2>{titulo}</h2>
+    </div>
+</div>
+
+<style>
+    .tarjeta-tecnologia{
+        width: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-primario);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 10px;
+        transition: transform 0.3s ease;
+    }
+    div{
+        color: white;
+    }
+    .icono img{
+        width: 34px;
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .tarjeta-tecnologia{
+            width: 150px;
+            height: 150px;
+        }
+
+    }
+</style>

@@ -1,0 +1,50 @@
+---
+import TarjetaTecnologia from '../components/TarjetaTecnologia.astro';
+import {iconosTecnologias} from '../js/tecnologias.js';
+
+const todasTecnologias = [
+  ...iconosTecnologias.frontend,
+  ...iconosTecnologias.backend,
+  ...iconosTecnologias.herramientas
+];
+---
+
+<section id="tecnologias">
+    <div class="container-section">
+        <article>
+            <h1>&ltTecnologías/&gt;</h1>
+        </article>
+        <div class="container-tarjetas">
+            {
+                todasTecnologias.map((tecnologia) => (
+                    <TarjetaTecnologia 
+                    titulo={tecnologia.titulo} 
+                    icono={tecnologia.icono.src} 
+                    />
+                ))
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 75px 0px;
+    }
+
+    .container-tarjetas{
+        width: 100%;
+        max-width: 1000px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+</style>
