@@ -9,7 +9,9 @@ import iconLuna from "../assets/iconos/moon.svg";
   <div class="container-header">
     <figure class="logo">
       <a href="/" class="logo-link">
-        <img src={logo.src} alt="logo" />
+        <div>
+          <img src={logo.src} alt="logo" />
+        </div>
         <h2>Portafolio</h2>
       </a>
     </figure>
@@ -27,25 +29,22 @@ import iconLuna from "../assets/iconos/moon.svg";
 
     <div class="container-header--icon">
       <figure class="menu-icon">
-        <svg  
-            xmlns="http://www.w3.org/2000/svg"  
-            class="menu-hamburguesa--icon"
-            width="24"  
-            height="24"  
-            viewBox="0 0 24 24"  
-            fill="none"  
-            stroke="currentColor"  
-            stroke-width="2"  
-            stroke-linecap="round"  
-            stroke-linejoin="round"  
-            class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
-            <path 
-            stroke="none" 
-            d="M0 0h24v24H0z" 
-            fill="none"/><path 
-            d="M4 6l16 0" /><path 
-            d="M4 12l16 0" /><path 
-            d="M4 18l16 0" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="menu-hamburguesa--icon"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M4 6l16 0"></path><path d="M4 12l16 0"></path><path
+            d="M4 18l16 0"></path>
         </svg>
       </figure>
       <div class="hover-icon">
@@ -61,7 +60,7 @@ import iconLuna from "../assets/iconos/moon.svg";
 <style>
   header {
     width: 100%;
-    background-color: var(--color-principal);
+    background-color: var(--color-fuente-tag);
     position: fixed;
     padding: 20px;
     display: flex;
@@ -69,6 +68,7 @@ import iconLuna from "../assets/iconos/moon.svg";
     justify-content: center;
     top: 0;
     z-index: 10;
+    border-bottom: 1px solid var(--border-color);
   }
 
   .theme-button {
@@ -96,7 +96,6 @@ import iconLuna from "../assets/iconos/moon.svg";
     align-items: center;
     justify-content: space-between;
     max-width: var(--ancho-maximo);
-
   }
 
   .container-header--icon {
@@ -107,9 +106,19 @@ import iconLuna from "../assets/iconos/moon.svg";
 
   .logo-link {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     align-items: center;
   }
+
+  .logo-link div {
+    background-color: var(--color-secundario);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+
 
   nav {
     position: absolute;
@@ -122,7 +131,7 @@ import iconLuna from "../assets/iconos/moon.svg";
     flex-direction: column;
     align-items: center;
     padding-top: 80px;
-    background-color: var(--color-principal);
+    background-color: var(--color-fuente-tag);
     transition: all ease 0.4s;
 
     && ul {
@@ -159,15 +168,13 @@ import iconLuna from "../assets/iconos/moon.svg";
     transform: translate(-1200px);
   }
 
-  .menu-icon{
+  .menu-icon {
     display: grid;
   }
 
-  .hover-icon{
+  .hover-icon {
     display: grid;
   }
-
-
 
   @media only screen and (min-width: 1024px) {
     .logo {

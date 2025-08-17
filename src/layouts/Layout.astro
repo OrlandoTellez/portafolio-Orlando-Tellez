@@ -1,6 +1,9 @@
 ---
 // Supports weights 200-700
 import "@fontsource-variable/oswald";
+// Supports weights 100-900
+import "@fontsource-variable/onest";
+
 interface Props {
   title: string;
 }
@@ -11,7 +14,7 @@ import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -36,19 +39,21 @@ import Footer from "../components/Footer.astro";
   }
 
   [data-theme="dark"] {
-   	--color-principal: #121216;
-    --color-secundario: #ffd700;
-    --color-alternar: #ffd700;
+    --color-principal: #0d1117;
+    --color-secundario: #101624;
+    --color-terciario: #121419;
+    --color-resaltado: #3b82f6;
+    --border-color: hsl(220 15% 18%);
     --color-alternar-fondo: black;
     --color-alternar-svg-fondo: #2f291d;
     --color-card: #17171c;
     --color-fuente: #fafafa;
     --color-fuente-secundario: #c5c5c5;
-	  --color-fuente-tag: black;
+    --color-fuente-tag: black;
   }
 
   [data-theme="light"] {
-	--color-principal: #f8eedf;
+    --color-principal: #f8eedf;
     --color-secundario: #ffd700;
     --color-alternar: black;
     --color-alternar-fondo: #f8eedf;
@@ -56,7 +61,7 @@ import Footer from "../components/Footer.astro";
     --color-card: #fafafa;
     --color-fuente: #09090b;
     --color-fuente-secundario: #484643;
-	--color-fuente-tag: white;
+    --color-fuente-tag: white;
   }
 
   * {
@@ -67,7 +72,8 @@ import Footer from "../components/Footer.astro";
 
   html {
     /* font-family: system-ui, sans-serif; */
-    font-family: "Oswald Variable", sans-serif;
+    /* font-family: "Oswald Variable", sans-serif; */
+    font-family: "Onest Variable", sans-serif;
     background-size: 224px;
     scroll-behavior: smooth;
     display: flex;
@@ -78,11 +84,17 @@ import Footer from "../components/Footer.astro";
 
   body {
     width: 100%;
-    background-color: var(--color-principal);
+    background: #0d1117;
+    background: linear-gradient(
+      138deg,
+      rgb(0, 0, 0) 0%,
+      rgb(21, 23, 29) 50%,
+      rgba(16, 22, 36, 1) 100%
+    );
   }
 
   h1 {
-	color: var(--color-fuente);
+    color: var(--color-fuente);
     font-size: 2.5rem;
   }
 
@@ -98,5 +110,9 @@ import Footer from "../components/Footer.astro";
   a {
     text-decoration: none;
     color: var(--color-fuente);
+  }
+
+  button{
+    cursor: pointer;
   }
 </style>

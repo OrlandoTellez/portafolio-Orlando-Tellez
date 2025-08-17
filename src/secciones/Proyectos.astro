@@ -1,26 +1,25 @@
 ---
-import { proyectos } from "../data/proyectos.js"
-import Tarjetas from "../components/Tarjetas.jsx"
+import Glass from "../components/Glass.astro"
+import ProyectosFiltrados from "../components/ProyectosFiltrados"
+import codeIcon from "../assets/iconos/code.svg"
 ---
 
 <section id="proyectos">
-    <div class="container-section">
-        <article>
-            <h1>&ltProyectos/&gt;</h1>
-        </article>
-        <div class="container-tarjetas">
-            {
-              proyectos.map((proyecto) => (
-                <Tarjetas 
-                subtitulo={proyecto.subtitulo} 
-                tecnologias={proyecto.tecnologias}
-                texto={proyecto.texto} 
-                img={proyecto.img}
-                url={proyecto.url}
-                github={proyecto.github}/>
-              ))
-            }
-    </div>
+        <div class="container-section">
+            <article>
+                <div class="title-container">
+                    <img src={codeIcon.src} alt="code icon">
+                    <h2> Proyectos Destacados</h2>
+                </div>
+                <a href="#">Ver todos</a>
+            </article>
+
+            <Glass>
+                <ProyectosFiltrados 
+                client:load
+                />
+            </Glass>
+        </div>
 </section>
 
 <style>
@@ -30,30 +29,49 @@ import Tarjetas from "../components/Tarjetas.jsx"
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 75px 0px;
-        background-color: var(--color-alternar-fondo);
+        padding: 35px 20px;
+        background-color: var(--color-fuente-tag);
+        border-bottom: 1px solid var(--border-color);
+        border-top: 1px solid var(--border-color);
     }
 
     .container-section{
         width: 100%;
-        max-width: 1024px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .container-section article h1{
-        font-size: var(--titulos);
-        margin-top: 20px;
-        margin-bottom: 40px;
+    .title-container{
+        display: flex;
+        gap: 20px;
     }
 
-    .container-tarjetas{
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        place-items: center;
-        gap: 25px;
+    h2{
+        font-size: 1.9rem;
+        color: var(--color-fuente);
     }
+
+    .container-section article{
+        width: 100%;
+        max-width: 1024px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .container-section article h1{
+        font-size: var(--titulos);
+    }
+
+    .container-section article a{
+        display: flex;
+        background-color: var(--color-resaltado);
+        font-size: 1rem;
+        padding: 5px 10px;
+        border-radius: 7px;
+        text-align: center;
+        }
 </style>

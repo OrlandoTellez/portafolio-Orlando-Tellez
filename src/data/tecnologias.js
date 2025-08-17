@@ -12,18 +12,25 @@ import git from '../assets/iconos/git.svg';
 import strapi from '../assets/iconos/strapi.svg';
 import typescript from '../assets/iconos/typescript.svg';
 import csharp from '../assets/iconos/csharp.svg';
+// import vite from '../assets/iconos/vite.svg';
 
 export const iconos = {
-    "HTML": "html",
-    "CSS": "css",
-    "Js": "javascript",
-    "React": "react",
-    "Astro": "astro",
-    "NodeJs": "nodejs",
-    "NextJs": "nextjs",
-    "MySql": "mysql",
-    "Express": "express",
-}
+  "HTML": "html",
+  "CSS": "css",
+  "JS": "javascript",
+  "TS": "typescript",
+  "React": "react",
+  "Astro": "astro",
+  "NodeJs": "nodejs",
+  "NextJs": "nextjs",
+  "MySql": "mysql",
+  "Express": "express",
+  // "SQL Server": sqlserver,
+  "Git": "git",
+  "Strapi": "strapi",
+  "C#": "csharp",
+  // "Vite": vite,
+};
 
 export const iconosTecnologias = {
   frontend: [
@@ -34,6 +41,7 @@ export const iconosTecnologias = {
     { titulo: "Astro", icono: astro },
     { titulo: "NextJs", icono: nextjs },
     { titulo: "TypeScript", icono: typescript },
+    // { titulo: "Vite", icono: vite },
   ],
   backend: [
     { titulo: "NodeJs", icono: nodejs },

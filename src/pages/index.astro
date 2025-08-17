@@ -1,19 +1,50 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Experiencia from "../secciones/Experiencia.astro";
 import Hero from "../secciones/Hero.astro";
+import InfoDetails from "../secciones/InfoDetails.astro";
 import Proyectos from "../secciones/Proyectos.astro";
-import SobreMi from '../secciones/SobreMi.astro';
-import Tecnologias from '../secciones/Tecnologias.astro';
+import SobreMi from "../secciones/SobreMi.astro";
+import Tecnologias from "../secciones/Tecnologias.astro";
 ---
 
 <Layout title="Orlando Téllez">
-	<main>
-		<Hero />
-		<Proyectos />
-		<Tecnologias /> 
-		<SobreMi/>
-	</main>
+  <main>
+    <Hero />
+    <section>
+      <article>
+        <Experiencia />
+        <InfoDetails />
+      </article>
+    </section>
+    <Proyectos />
+    <Tecnologias />
+    <SobreMi />
+  </main>
 </Layout>
 
+<style>
+  section {
+    background-color: var(--color-fuente-tag);
+    width: 100%;
+    padding: 75px 0px;
+	padding: 20px;
+  }
 
+  article {
+    margin: 0 auto;
+    display: flex;
+	flex-direction: column;
+    gap: 20px;
 
+    width: 100%;
+    max-width: 1024px;
+  }
+
+  @media only screen and (min-width: 1024px){
+	article{
+		display: flex;
+		flex-direction: row;
+	}
+  }
+</style>

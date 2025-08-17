@@ -12,13 +12,12 @@ const { titulo, icono }: Props = Astro.props;
         <img src={icono} alt={titulo} />
     </div>
     <div class="titulo">
-        <h2>{titulo}</h2>
+        <p>{titulo}</p>
     </div>
 </div>
 
 <style>
     .tarjeta-tecnologia{
-        width: 140px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -31,18 +30,11 @@ const { titulo, icono }: Props = Astro.props;
         color: white;
     }
     .icono img{
-        width: 34px;
+        width: 24px;
     }
 
     h2{
         color: var(--color-fuente);
     }
 
-    @media only screen and (min-width: 1024px) {
-        .tarjeta-tecnologia{
-            width: 150px;
-            height: 150px;
-        }
-
-    }
 </style>
