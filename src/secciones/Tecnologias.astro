@@ -8,7 +8,6 @@ import expressIcon from "../assets/iconos/express.svg";
 import mySqlIcon from "../assets/iconos/mysql.svg";
 import laptopIcon from "../assets/iconos/laptop.svg";
 
-
 // Accedemos a cada grupo
 const frontend = iconosTecnologias.frontend;
 const backend = iconosTecnologias.backend;
@@ -18,16 +17,16 @@ const herramientas = iconosTecnologias.herramientas;
 <section id="tecnologias">
   <div class="container-section">
     <article>
-        <div>
-            <img src={laptopIcon.src} alt="laptop icon">
-            <h2>Tecnologías</h2>
-        </div>
+      <div>
+        <img src={laptopIcon.src} alt="laptop icon" />
+        <h2>Tecnologías</h2>
+      </div>
       <p>
         Stack favorito:
         <img src={typescriptIcon.src} alt="typescript icon" />
-        <img src={reactIcon.src} alt="react icon">
-        <img src={expressIcon.src} alt="react icon">
-        <img src={mySqlIcon.src} alt="mysql icon">
+        <img src={reactIcon.src} alt="react icon" />
+        <img src={expressIcon.src} alt="react icon" />
+        <img src={mySqlIcon.src} alt="mysql icon" />
       </p>
     </article>
 
@@ -100,6 +99,11 @@ const herramientas = iconosTecnologias.herramientas;
     max-width: 1024px;
   }
 
+  .container-section article{
+    display: flex;
+    flex-direction: column;
+  }
+
   .cards {
     width: 100%;
     display: flex;
@@ -119,25 +123,25 @@ const herramientas = iconosTecnologias.herramientas;
     justify-content: space-between;
   }
 
-  article div{
+  article div {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
   }
 
-  article div img{
+  article div img {
     width: 34px;
   }
 
-  article p{
+  article p {
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: center;
   }
 
-  article p img{
+  article p img {
     width: 24px;
   }
 
@@ -145,5 +149,10 @@ const herramientas = iconosTecnologias.herramientas;
     .cards {
       flex-direction: row;
     }
+
+    
+  .container-section article{
+    flex-direction: row;
+  }
   }
 </style>
